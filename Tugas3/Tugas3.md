@@ -114,7 +114,7 @@ Berikut ini merupakan langkah-langkah pengerjaan tugas praktikum bab 3 mengenai 
       select * from SELEKSI_MASUK;
 ![Proses](./SS/Screenshot12.png)
 
-13. Tambahkan data ke dalam tabel Strata lalu jalankan baris select agar menampilkan tabel dan isi datanya.
+13. Tambahkan data ke dalam tabel Mahasiswa lalu jalankan baris select agar menampilkan tabel dan isi datanya.
     ```sql
       INSERT INTO MAHASISWA(NIM, ID_SELEKSI_MASUK, ID_PROGRAM_STUDI, NAMA, ANGKATAN, TGL_LAHIR, KOTA_LAHIR, JENIS_KELAMIN)
       VALUES('155150400', 1, 211, 'JONI', 2015, '1997-01-01', 'Malang', 'W'), ('155150401', 2, 212, 'JONO', 2015, '1997-10-02', 'Situbondo','P');
