@@ -1,6 +1,3 @@
-create database sampel_university;
-use sampel_university;
-
 create table classroom
 	(building		varchar(15),
 	 room_number		varchar(7),
@@ -34737,21 +34734,56 @@ insert into prereq values('558', '130');
 insert into prereq values('877', '599');
 insert into prereq values('349', '612');
 
-SELECT s.name AS Nama_Mahasiswa, d.dept_name AS Departemen
-FROM student s
-LEFT JOIN department d ON s.dept_name = d.dept_name;
 
-SELECT s.name AS Nama_Mahasiswa, d.dept_name AS Departemen
-FROM student s
-INNER JOIN department d ON s.dept_name = d.dept_name
-WHERE s.tot_cred > 100;
 
-SELECT s.name AS Nama_Mahasiswa, i.name AS Nama_Instructor, s.dept_name AS Departemen
-FROM student s
-INNER JOIN instructor i ON s.dept_name = i.dept_name;
-
-use sample_university
-select CONCAT (student_name, '', dept_name) as Profile
+select CONCAT (name,'   ', dept_name) as Profile
 from student;
 
-show tables
+select substring_index(title, ' ', 3) as MATKUL
+from course;
+
+select SUBSTR(DEPT_NAME, 1, 3) as PRODI
+from student;
+
+select length(dept_name)
+from student;
+
+select name, replace(name, 'Duan', 'Selma') as Nama_yg_diganti
+from student;
+
+select abs(i_ID)
+from advisor;
+
+select ceiling(course_id)
+from takes;
+
+select floor(course_id)
+from takes;
+
+select round(sec_id)
+from takes;
+
+select sqrt(course_id)
+from takes;
+
+select curdate();
+
+select curtime();
+
+select timestamp("2021-10-10", 12.00);
+
+select sum(course_id)
+from takes;
+
+select avg(course_id)
+from takes;
+
+select count(sec_id)
+from takes;
+
+SELECT AVG(sec_id), sec_id
+FROM takes
+GROUP BY sec_id
+HAVING AVG(sec_id) > 2;
+
+show tables;
